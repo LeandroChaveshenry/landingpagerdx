@@ -1,63 +1,52 @@
-// Paginação
-const pages = document.querySelectorAll('.gallery-page');
-const prevButton = document.getElementById('prevPage');
-const nextButton = document.getElementById('nextPage');
-let currentPage = 0;
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('expandedImg');
+    const closeBtn = document.querySelector('.close');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
 
-function showPage(pageIndex) {
-    pages.forEach((page, index) => {
-        page.classList.toggle('active', index === pageIndex);
-    });
-}
+    let currentIndex = 0;
 
-prevButton.addEventListener('click', () => {
-    if (currentPage > 0) {
-        currentPage--;
-        showPage(currentPage);
-    }
-});
-
-nextButton.addEventListener('click', () => {
-    if (currentPage < pages.length - 1) {
-        currentPage++;
-        showPage(currentPage);
-    }
-});
-
-// Modal de visualização ampliada
-const galleryItems = document.querySelectorAll('.gallery-item img');
-const modal = document.getElementById('imageModal');
-const modalImg = document.getElementById('expandedImg');
-const closeBtn = document.querySelector('.close');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-
-let currentIndex = 0;
-
-galleryItems.forEach((img, index) => {
-    img.addEventListener('click', () => {
-        modal.style.display = 'block';
-        modalImg.src = img.src;
+    // Função para abrir o modal e exibir a imagem ampliada
+    function openModal(index) {
         currentIndex = index;
-    });
-});
+        modal.style.display = 'block';
+        modalImg.src = galleryItems[index].src;
+    }
 
-closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
-
-prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
-    modalImg.src = galleryItems[currentIndex].src;
-});
-
-nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % galleryItems.length;
-    modalImg.src = galleryItems[currentIndex].src;
-});
-
-window.addEventListener('click', (event) => {
-    if (event.target === modal) {
+    // Função para fechar o modal
+    function closeModal() {
         modal.style.display = 'none';
     }
+
+    // Função para navegar entre as imagens no modal
+    function navigate(direction) {
+        currentIndex += direction;
+        if (currentIndex >= galleryItems.length) {
+            currentIndex = 0;
+        } else if (currentIndex < 0) {
+            currentIndex = galleryItems.length - 1;
+        }
+        modalImg.src = galleryItems[currentIndex].src;
+    }
+
+    // Adiciona eventos de clique às imagens da galeria
+    galleryItems.forEach((img, index) => {
+        img.addEventListener('click', () => openModal(index));
+    });
+
+    // Adiciona eventos de clique às setas de navegação
+    prevBtn.addEventListener('click', () => navigate(-1));
+    nextBtn.addEventListener('click', () => navigate(1));
+
+    // Adiciona evento de clique ao botão de fechar o modal
+    closeBtn.addEventListener('click', closeModal);
+
+    // Fecha o modal ao clicar fora da imagem
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
 });

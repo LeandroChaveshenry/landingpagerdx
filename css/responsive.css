@@ -304,5 +304,17 @@
         font-size: 14px;
     }
 
+    .gallery {
+        grid-template-columns: 1fr; /* 1 coluna em telas menores */
+    }
+
+    .gallery-item {
+        margin-bottom: 10px; /* Espaço entre as imagens */
+    }
+
+    .gallery-item:hover img {
+        transform: none; /* Remove o efeito de hover em dispositivos móveis */
+    }
+
 
 }
