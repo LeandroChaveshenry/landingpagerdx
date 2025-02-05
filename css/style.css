@@ -932,3 +932,65 @@ input:focus::placeholder {
 .next:hover {
     background-color: rgba(235, 227, 227, 0.8);
 }
+
+.carousel-inner{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.funcionalidades {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.caixa-texto {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+    height: 100%; /* Para garantir que todos os cards tenham a mesma altura */
+    width: 100%;
+}
+
+.caixa-texto h4 {
+    font-size: 1.1em;
+    line-height: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.caixa-texto p {
+    font-size: 1.1em;
+    line-height: 30px;
+    font-weight: 200;
+    text-align: center;
+    
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000000 !important;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.carousel-control-prev-icon{
+    margin-right: 350px;
+}
+
+.carousel-control-next-icon{
+    margin-left: 350px;
+}
+
+/* Ajustes para responsividade */
+@media (max-width: 768px) {
+    .caixa-texto {
+        margin: 10px 0;
+    }
+}
