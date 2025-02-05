@@ -1,0 +1,308 @@
+@media screen and (max-width: 1100px) {
+
+    header .menu-desktop,
+    .btn-contato {
+        display: none;
+
+    }
+
+    header .btn-menu-mob {
+        display: block;
+    }
+
+
+}
+
+
+
+
+/*Deixando o hero responsivo*/
+
+@media screen and (max-width: 878px) {
+
+
+
+    .img-desktop {
+        display: none;
+    }
+
+    .img-mobile {
+        display: block;
+    }
+
+    .nav-auto,
+    .nav-manual {
+        margin-top: 60%;
+    }
+
+    header .logo img {
+        max-width: 100px;
+        padding-left: 10px;
+
+    }
+
+    .hero-site .interface {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .hero-site .txt-hero h1 {
+        font-size: 2.6em;
+        line-height: 45px;
+        padding-top: 100px;
+        padding-left: 10px;
+
+    }
+
+    .hero-site .txt-hero h1 span {
+        display: block;
+        font-weight: 800;
+        font-size: 50px;
+        color: #f0c570;
+    }
+
+    .hero-site .txt-hero p {
+        font-size: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .hero-site .txt-hero p span {
+        display: inline;
+    }
+
+    .hero-site button {
+        font-size: 18px;
+
+    }
+
+    .hero-site a {
+        padding-left: 10px;
+
+    }
+
+
+    /* Deixando as vantagens responsiva*/
+
+    .vantagens .itens-container {
+        flex-direction: column;
+    }
+
+    .vantagens .itens-container .img-itens img {
+        width: 100%;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 25px;
+    }
+
+    .vantagens .itens-container .txt-itens h3 {
+        font-size: 2.4em;
+        line-height: 50px;
+        margin-bottom: 20px;
+        font-weight: 200;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .vantagens .itens-container .txt-itens h2 {
+        font-size: 25px;
+        line-height: 50px;
+        margin-bottom: 5px;
+        font-weight: 200;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .vantagens .itens-container .txt-itens p {
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+
+    .itens-container .txt-itens h3 span {
+        font-weight: 700;
+    }
+
+    .vantagens .itens-container .item-1 {
+        order: 1;
+    }
+
+    .vantagens .itens-container .item-2 {
+        order: 0;
+    }
+
+    /*Responsivo dos botoes de contattos*/
+
+    .txt-contato,
+    .icons-contato {
+        display: block;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+
+    .contato .txt-contato h3 {
+        font-size: 2em;
+        line-height: 40px;
+
+    }
+
+
+    .contato .icons-contato a {
+        text-decoration: none;
+
+    }
+
+    .contato .icons-contato button a {
+        text-align: center;
+
+    }
+
+    .contato .interface .icons-contato button p {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding-top: 15px;
+
+    }
+
+    .contato .interface .icons-contato button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+
+
+
+        width: 100%;
+        height: 60px;
+        margin: 0 auto 20px auto;
+        padding: 0 60px;
+
+        background-color: transparent;
+        border: 2px solid #000;
+        cursor: pointer;
+
+        transition: 0.5s;
+    }
+
+    .contato .icons-contato button i {
+        font-size: 24px;
+    }
+
+    .contato .icons-contato button:hover {
+        background-color: #000;
+    }
+
+
+    /*responsivo sessão hotéis*/
+
+
+    .hoteis h3 {
+        font-size: 2em;
+        line-height: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+
+    .hoteis p {
+        margin: 20px 0;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+
+
+    /* Responsivo da sessão como funciona*/
+
+
+
+    .txt-funciona,
+    .instrucoes {
+        display: block;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .como-funciona .txt-funciona {
+        position: static;
+
+    }
+
+    .como-funciona .txt-funciona h3 {
+        font-size: 3em;
+        line-height: 50px;
+
+    }
+
+
+
+    .instrucoes .instru-box {
+
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+
+    /*responsivo do formulario*/
+
+    
+    .flex {
+        display: block;
+        height: 100%;
+        padding: 30px 10px;
+    }
+    
+    .txt-leads h1 span {
+        font-size: 1.6em;
+        font-weight: 700;
+    }
+
+    .txt-leads img {
+        width: 250px;
+        
+    }
+
+    form h2 { 
+        font-size: 1.6em;
+        
+    }
+
+
+    /*responsivo do sobre*/
+
+    .sobre{
+        padding: 0 10px;
+    }
+    
+    .sobre h1{
+        margin-bottom: 50px;
+        font-size: 2em;
+    }
+
+
+
+    /* estilo do footer*/
+
+
+    footer .middle-footer a {
+        text-decoration: none;
+        margin: 15px 0;
+        display: block;
+    }
+
+    footer .bottom-footer p {
+
+        font-size: 14px;
+    }
+
+
+}
