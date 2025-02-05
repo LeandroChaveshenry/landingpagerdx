@@ -48,8 +48,8 @@
     }
 
     .hero-site .txt-hero h1 {
-        font-size: 2.6em;
-        line-height: 45px;
+        font-size: 2.5em;
+        line-height: 50px;
         padding-top: 100px;
         padding-left: 10px;
 
@@ -63,7 +63,7 @@
     }
 
     .hero-site .txt-hero p {
-        font-size: 15px;
+        font-size: 1.2;
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -254,13 +254,13 @@
 
     /*responsivo do formulario*/
 
-    
+
     .flex {
         display: block;
         height: 100%;
         padding: 30px 10px;
     }
-    
+
     .txt-leads h1 span {
         font-size: 1.6em;
         font-weight: 700;
@@ -268,22 +268,22 @@
 
     .txt-leads img {
         width: 250px;
-        
+
     }
 
-    form h2 { 
+    form h2 {
         font-size: 1.6em;
-        
+
     }
 
 
     /*responsivo do sobre*/
 
-    .sobre{
+    .sobre {
         padding: 0 10px;
     }
-    
-    .sobre h1{
+
+    .sobre h1 {
         margin-bottom: 50px;
         font-size: 2em;
     }
@@ -305,15 +305,23 @@
     }
 
     .gallery {
-        grid-template-columns: 1fr; /* 1 coluna em telas menores */
+        grid-template-columns: 1fr;
+        /* 1 coluna em telas menores */
     }
 
     .gallery-item {
-        margin-bottom: 10px; /* Espaço entre as imagens */
+        margin-bottom: 10px;
+        /* Espaço entre as imagens */
     }
 
     .gallery-item:hover img {
-        transform: none; /* Remove o efeito de hover em dispositivos móveis */
+        transform: none;
+        /* Remove o efeito de hover em dispositivos móveis */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        display: none;
     }
 
 
